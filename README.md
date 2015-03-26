@@ -50,5 +50,5 @@ Scrape workflow:
   |--       key-value Map   -------|------ key-value Map  -> JSONObject --------|
 
 
-How to execute:
-	>>java -Dfile.encoding=UTF-8 -jar [JAR_FILE] -fname [PROXY_FILE] -thread [NUM_OF_THREADS]
+How to execute:  
+`java -Dfile.encoding=UTF-8 -jar [JAR] -fname [PROXY] -thread [NTHREADS]`
