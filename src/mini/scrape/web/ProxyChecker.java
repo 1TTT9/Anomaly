@@ -20,7 +20,7 @@ import utils.scrape.web.RandomInteger;
 
 public class ProxyChecker implements Runnable {
 
-	public static String urlstring = "http://lion057.300c2.org.tw/14-15/";
+	public static String urlstring = "http://www.example.com/";
 	
 	public static int wait_t = 1;
 	
