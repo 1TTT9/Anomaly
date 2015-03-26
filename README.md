@@ -1,7 +1,17 @@
 Anomaly
 ========
 
-web scraper for e-commerence website
+## 2015/03/26
+
+## ■ Updated
+add package "mini.scrap.web.ScraperMini" and execute simple web-visit act.
+- 0. 2 files `ProxyCheker.java` and `ScraperMini`.
+- 1. allow to visit a webpage periodically.
+- 2. enable to shutdown selenium driver in epxected period of time-wait.
+- 3. target on validating availability of proxies on list.
+
+
+#web scraper for e-commerence website
 
 Java version: 4.1
 Eclipse vervion: 4.4(Luna)
@@ -35,20 +45,9 @@ Steps to create a new webiste scraping:
 
 Scrape workflow:
   [urlroot, null] -> [urlstring_A, catestring_A] ->  ... -> [urlstring_Az, catestring_A]  -> [catestring_A, title, text]
-  |-------------------- 	 link page  scraping		------------------|---------- content page scraping -----------|
-  |--------------------       key-value Map 	    ----------------------|------ key-value Map  -> JSONObject --------|
+  |---- link page  scraping		-----|---------- content page scraping -----------|
+  |--       key-value Map   -------|------ key-value Map  -> JSONObject --------|
 
 
 How to execute:
 	>>java -Dfile.encoding=UTF-8 -jar [JAR_FILE] -fname [PROXY_FILE] -thread [NUM_OF_THREADS]
-
-
-## 2015/03/26
-
-## ■ Updated
-add package "mini.scrap.web.ScraperMini" and execute simple web-visit act.
-- 0. 2 files `ProxyCheker.java` and `ScraperMini`.
-- 1. allow to visit a webpage periodically.
-- 2. enable to shutdown selenium driver in epxected period of time-wait.
-- 3. target on validating availability of proxies on list.
-
