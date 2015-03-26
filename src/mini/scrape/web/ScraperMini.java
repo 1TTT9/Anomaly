@@ -1,10 +1,7 @@
 package mini.scrape.web;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -85,10 +82,15 @@ public class ScraperMini implements IFScraper {
 		
 		executor.shutdown();
 		
-		long period_t = 4*60*60*1000;
+		long period_t = settings.applife;
+		ProxyChecker.wait_t = settings.twait;
+		
 		int counter = 0;
 		while (true) {
-			if ( executor.isTerminated() ) break;
+			if ( executor.isTerminated() ){
+				executor.shutdownNow();				
+				break;
+			}
 			
 			cur_t = System.currentTimeMillis();
 			

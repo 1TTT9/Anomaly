@@ -5,10 +5,11 @@ Anomaly
 
 ## ■ Updated
 add package "mini.scrap.web.ScraperMini" and execute simple web-visit act.
-- 0. 2 files `ProxyCheker.java` and `ScraperMini`.
-- 1. allow to visit a webpage periodically.
-- 2. enable to shutdown selenium driver in epxected period of time-wait.
-- 3. target on validating availability of proxies on list.
+- 0. Two files added `ProxyCheker.java` and `ScraperMini`.
+- 1. Allow to visit a webpage periodically.
+- 2. Enable to shutdown selenium driver in epxected period of time-wait.
+- 3. Target on validating availability of proxies on list.
+- 4. Two parameters added. `life` and `wait` to control life cycle of application and threads.
 
 
 #web scraper for e-commerence website

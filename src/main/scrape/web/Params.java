@@ -11,4 +11,11 @@ public class Params {
 	
 	@Parameter(names = "-thread", description = "thread number", required = false)
 	public int numOfThread = 0;	
+	
+	@Parameter(names = "-life", description = "app life", required = false)
+	public long applife = 7*60*60*1000;		
+	
+	@Parameter(names = "-wait", description = "app life", required = false)
+	public int twait = 5*60;
+	
 }

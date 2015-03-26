@@ -20,7 +20,10 @@ import utils.scrape.web.RandomInteger;
 
 public class ProxyChecker implements Runnable {
 
-	public static String urlstring = "http://www.example.com";
+	public static String urlstring = "http://lion057.300c2.org.tw/14-15/";
+	
+	public static int wait_t = 1;
+	
 	
 	public static List<String> taskQ = new ArrayList<String>();	
 	public static List<Map<String, Boolean>> resQ = new ArrayList<Map<String, Boolean>>();
@@ -28,6 +31,8 @@ public class ProxyChecker implements Runnable {
 	protected WebDriver driver = null;	
 	
 	protected String thrName = null;
+	
+	
 	
     public static WebDriver setupWebDriver(String...args) {
     	
@@ -73,8 +78,10 @@ public class ProxyChecker implements Runnable {
 		
     	while (true) {    	 
     		    		
-    		if (taskQ.isEmpty()) 
-    			break;
+    		if (taskQ.isEmpty()) { 
+    			RandomInteger.waitSecond(5, 10);    			
+    			continue;
+    		}
     		
     		String proxystring = taskQ.remove( RandomInteger.getRandomInteger(1, taskQ.size())-1 );    		
     		boolean isAvailable = false;
@@ -89,9 +96,9 @@ public class ProxyChecker implements Runnable {
     			resQ.add(r);
 			}
  		
-    		RandomInteger.waitSecond(1.0, 5.5);
+    		RandomInteger.waitSecond(30, RandomInteger.getRandomInteger(1, wait_t)+30);
     	}    	
 
-		PrintHelper.print("(%s-left-ok)", this.thrName);	
+		//PrintHelper.print("(%s-left-ok)", this.thrName);	
 	}	
 }
