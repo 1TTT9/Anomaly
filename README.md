@@ -44,7 +44,8 @@ Steps to create a new webiste scraping:
 
 
 Scrape workflow:
-  [urlroot, null] -> [urlstring_A, catestring_A] ->  ... -> [urlstring_Az, catestring_A]  -> [catestring_A, title, text]
+  [urlroot, null] -> [urlstring_A, catestring_A] ->  
+  ... -> [urlstring_Az, catestring_A]  -> [catestring_A, title, text]  
   |---- link page  scraping		-----|---------- content page scraping -----------|  
   |--       key-value Map   -------|------ key-value Map  -> JSONObject --------|
 
