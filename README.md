@@ -5,11 +5,11 @@ Anomaly
 Error: `org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms....` (partially neglected)  
 Status: `Solved`  
 Cause and solution:  
-Since I have my machine upgrade to linux kernel 3.19.1 (debian, and the previous is 3.18.x) and suddenly selenium turned out to be crashed, that might be the only cause of this error.  
-I have replace selenium's version 2.44 with version 2.45 and problem seems to be solved.  
+Since I have my machine upgrade to linux kernel 3.19.1 (debian, and the previous is 3.18.x) and suddenly selenium went crashed, that might be the only cause of this error.  
+I have replaced selenium's version 2.44 with version 2.45 and problem seems to be solved.  
 Ref: [stackedoverflow](http://stackoverflow.com/questions/12588082/webdriver-unable-to-connect-to-host-127-0-0-1-on-port-7055-after-45000-ms)
 
-## ■ Updated 2015/03/26
+## ■ Update 2015/03/26
 add package "mini.scrap.web.ScraperMini" and execute simple web-visit act.
 - 0. Two files added `ProxyCheker.java` and `ScraperMini`.
 - 1. Allow to visit a webpage periodically.
@@ -58,4 +58,4 @@ Scrape workflow:
 
 
 How to execute:  
-`java -Dfile.encoding=UTF-8 -jar [JAR] -fname [PROXY] -thread [NTHREADS]`
+ `>>java -Dfile.encoding=UTF-8 -jar [JAR_FILE] -fname [PROXY_FILE] -thread [NUM_OF_THREADS]`
